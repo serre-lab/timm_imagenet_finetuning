@@ -1,0 +1,7 @@
+# Ignore a specific directory and its contents
+./__pycache__
+./wandb
+.DS_Store
+__pycache__/
+wandb/
+.goutputstream-702GK2
