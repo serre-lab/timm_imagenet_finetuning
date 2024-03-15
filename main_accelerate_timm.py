@@ -2,7 +2,7 @@
 Title: Timm Finetuning on ImageNet
 Authored by Pinyuan Feng (Tony)
 Created on Mar. 07th, 2024
-Last Modified on Mar. 08th, 2024
+Last Modified on Mar. 14th, 2024
 '''
 
 import os
@@ -277,7 +277,7 @@ def run(args):
                     transforms.Resize(256), transforms.CenterCrop(224), transforms.ToTensor(), normalize,
             ]))
 
-        train_loader = DataLoader(train_dataset, batch_size = args.batch_size, num_workers = args.num_workers, pin_memory = False, shuffle = False, drop_last = True)
+        train_loader = DataLoader(train_dataset, batch_size = args.batch_size, num_workers = args.num_workers, pin_memory = False, shuffle = True, drop_last = True)
         val_loader = DataLoader(val_dataset, batch_size = args.batch_size, num_workers = args.num_workers, pin_memory = False, shuffle = False, drop_last = True)
 
         # Instantiate optimizer and learning rate scheduler
